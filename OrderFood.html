@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        body {
+            background-color: #524545;
+            font-family: "Poppins", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 700px;
+            width: 700px;
+        }
+
+        .heading h2, .heading p, .of h2 {
+            text-align: center;
+            margin: 0;
+        }
+
+        .heading h2 {
+            margin-bottom: 10px;
+        }
+
+        .heading p a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .heading p a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            font-weight: 500;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #218838;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+        .BookTable
+        {
+            margin-left: 500px;
+        }
+        .warning
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h2>Order Food Online</h2>
+            <p>Choose from our special menu and place your order: <a href="Menu.html">Spicy Mahal Menu</a></p>
+            <a class="index" href="index.html">Home</a>
+            <a class="BookTable" href="BookTable.html">Book A Table</a>
+        </div>
+        <form class="of" action="OrderFood1" method="get">
+            <h2>Order Form</h2>
+            <label for="item">Select Item:</label>
+            <select id="item" name="item" required>
+                <optgroup label="Breakfast">
+                    <option value="Italian Egg Omlette">Italian Egg Omlette - 120 Rs</option>
+                    <option value="Ghee Parantha">Ghee Parantha - 100 Rs</option>
+                    <option value="Roti">Roti - 40 Rs</option>
+                </optgroup>
+                <optgroup label="Lunch">
+                    <option value="Chicken Biryani">Chicken Biryani - 180 Rs</option>
+                    <option value="Fish Fry">Fish Fry - 240 Rs</option>
+                    <option value="Indian Thali">Indian Thali - 300 Rs</option>
+                </optgroup>
+                <optgroup label="Dinner">
+                    <option value="Grilled Prawns">Grilled Prawns - 220 Rs</option>
+                    <option value="Chicken Harabhara">Chicken Harabhara - 250 Rs</option>
+                    <option value="Chicken Curry">Chicken Curry - 260 Rs</option>
+                </optgroup>
+            </select>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Your Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            <button type="submit">Place Order</button>
+        </form>
+        <p class="warning">Login First To Order Food And Table Booking. <a href="signin.html">Click Here To Sign Up</a></p>
+    </div>
+</body>
+</html>
